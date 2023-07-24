@@ -1,6 +1,7 @@
+//here we are defining all the variables we will use to build this game
 const X_CLASS = 'x'
 const CIRCLE_CLASS = 'circle'
-const WINNING_COMBINATIONS = [
+const WINNING_COMBINATIONS = [   // all the combos which you can use to win. ( since its an array, the first div/cell is 0)
     [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -10,28 +11,28 @@ const WINNING_COMBINATIONS = [
     [2,4,6],
     [0,4,8]
 ]
-const cellElements = document.querySelectorAll('[data-cell]')
-const board = document.getElementById('board')
-const winningMessageElement = document.getElementById('winningMessage')
-const restartButton = document.getElementById('restartButton')
-const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
-let circleTurn
-startGame()
+const cellElements = document.querySelectorAll('[data-cell]') //here these variables are set to our divs using the document.querySelectorALL  and calling the "data-cell" tag (in an array[])
+const board = document.getElementById('board')//  we are setting the variable to the id board in our HTML
+const winningMessageElement = document.getElementById('winningMessage')// same here
+const restartButton = document.getElementById('restartButton')//same here
+const winningMessageTextElement = document.querySelector('[data-winning-message-text]')// you get the idea...
+let circleTurn // seting a variable
+startGame()// start game function
 restartButton.addEventListener('click', startGame)
 
 function startGame() {
-    circleTurn = false
+    circleTurn = false // you literally defined it here dumbass 
     cellElements.forEach(cell => {
         cell.classList.remove(X_CLASS)
         cell.classList.remove(CIRCLE_CLASS)
         cell.removeEventListener('click', handleClick)
-     cell.addEventListener('click', handleClick,{once: true})
+     cell.addEventListener('click', handleClick,{once: true})// i actually do not understand why circle is always false??
 })
 setBoardHoverCLass()
 winningMessageElement.classList.remove('show')
 }
 
-//do not understand why circle is always false??
+
 function handleClick(e) {
     const cell = e.target
     const currentClass = circleTurn ? CIRCLE_CLASS: X_CLASS
@@ -87,4 +88,5 @@ function checkWin(currentClass) {
         })
 
     })
+
 }
