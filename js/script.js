@@ -48,17 +48,17 @@ function handleClick(e) {
     
 }   
 
-function endGame(draw) {
+function endGame(draw) {  // check case at the end of the game
     if(draw){
   winningMessageTextElement.innerText = 'Draw!'
     }else {
-        winningMessageTextElement.innerText = `${circleTurn ? "oh's ": "X's "}Wins!`
+        winningMessageTextElement.innerText = `${circleTurn ? "O ": "X "}Wins!`
     }
     winningMessageElement.classList.add('show')
 }
 
-function isDraw(){
-    return [...cellElements].every(cell => {
+function isDraw(){   // case to check if there is a draw
+    return [...cellElements].every(cell => { // check every cell element to see if it has bben occupied by the x_class or circle_class
         return cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
     })
 } 
