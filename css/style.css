@@ -166,6 +166,22 @@ background-color: lightgray;
     
 }
 
+.top{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    position: relative;
+
+}
+
+ .image{ 
+    position: absolute;
+    top:-120%;
+        left: 35%;
+    height: 350px;
+    width: 300px;
+} 
+
 
 /* .score-container{
     border: 1px solid white;
