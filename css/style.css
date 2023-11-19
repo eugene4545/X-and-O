@@ -161,6 +161,11 @@ background-color: lightgray;
 
 }
 
+.score-container{
+    display: block;
+    
+}
+
 
 /* .score-container{
     border: 1px solid white;
