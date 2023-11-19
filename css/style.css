@@ -177,17 +177,18 @@ background-color: lightgray;
  .image{ 
     position: absolute;
     top:-120%;
-        left: 35%;
+        left: 40%;
     height: 350px;
     width: 300px;
 } 
 
 
-/* .score-container{
-    border: 1px solid white;
-    background: red;
+.in-game{
+    margin-left: 20px;
+    border: 1px solid black;
+    
     padding: 20px;
-} */
+} 
 
 
 

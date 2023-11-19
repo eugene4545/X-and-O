@@ -17,6 +17,8 @@ const winningMessageElement = document.getElementById('winningMessage')// same h
 const restartButton = document.getElementById('restartButton')//same here
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')// you get the idea...
 let circleTurn // seting a variable
+let xScoreTop = 0;
+let circleScoreTop = 0;
 let xScore = 0;
 let circleScore = 0;
 startGame()// start game function
@@ -63,10 +65,14 @@ function endGame(draw) {  // check case at the end of the game
 function updateScore(currentClass) {
     if (currentClass === X_CLASS) {
         xScore++;
+        xScoreTop++;
         document.getElementById('xScore').innerText = xScore;
+        document.getElementById('xScoreTop').innerText = xScoreTop;
     } else if (currentClass === CIRCLE_CLASS) {
         circleScore++;
+        circleScoreTop++;
         document.getElementById('circleScore').innerText = circleScore;
+        document.getElementById('circleScoreTop').innerText = circleScoreTop;
     }
     console.log(`X Score: ${xScore} | O Score: ${circleScore}`);
 }
