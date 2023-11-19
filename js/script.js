@@ -17,6 +17,8 @@ const winningMessageElement = document.getElementById('winningMessage')// same h
 const restartButton = document.getElementById('restartButton')//same here
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')// you get the idea...
 let circleTurn // seting a variable
+let xScore = 0;
+let circleScore = 0;
 startGame()// start game function
 restartButton.addEventListener('click', startGame)
 
@@ -39,9 +41,10 @@ function handleClick(e) {
     placeMark(cell, currentClass)
     if(checkWin(currentClass)){    //check for a win
        endGame(false)
+       updateScore(currentClass);
     }else if (isDraw()) {         //check for a draw
         endGame(true)
-    }else{                        // swap turns
+    }else{                         // swap turns
         swapTurns()
         setBoardHoverCLass()
     }
@@ -56,6 +59,20 @@ function endGame(draw) {  // check case at the end of the game
     }
     winningMessageElement.classList.add('show')
 }
+
+function updateScore(currentClass) {
+    if (currentClass === X_CLASS) {
+        xScore++;
+        document.getElementById('xScore').innerText = xScore;
+    } else if (currentClass === CIRCLE_CLASS) {
+        circleScore++;
+        document.getElementById('circleScore').innerText = circleScore;
+    }
+    console.log(`X Score: ${xScore} | O Score: ${circleScore}`);
+}
+
+
+
 
 function isDraw(){   // case to check if there is a draw
     return [...cellElements].every(cell => { // check every cell element to see if it has bben occupied by the x_class or circle_class
