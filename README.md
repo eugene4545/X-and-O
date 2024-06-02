@@ -3,12 +3,12 @@
 This is a simple Tic-Tac-Toe game built with HTML, CSS, and JavaScript. Play against a friend and keep track of your scores!
 
 ## Table of Contents
-- [Features](Features)
+- [Features](#features)
 - Getting Started
-  - [Installation](Installation)
-  - [usage](usage)
-- [Contributing](Contributing)
-- [License](License)
+  - [Installation](#installation)
+  - [usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 - Play Tic-Tac-Toe against a friend.
