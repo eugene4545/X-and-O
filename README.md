@@ -4,7 +4,7 @@ This is a simple Tic-Tac-Toe game built with HTML, CSS, and JavaScript. Play aga
 
 ## Table of Contents
 - [Features](#features)
-- Getting Started
+- [Getting Started](#getting-started)
   - [Installation](#installation)
   - [usage](#usage)
 - [Contributing](#contributing)
