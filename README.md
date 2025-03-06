@@ -22,13 +22,13 @@ To get a local copy up and running follow these simple steps.
 1. Clone the repo
 
 ```
-git clone https://github.com/yourusername/odera-x-and-oh.git
+https://github.com/eugene4545/X-and-O.git
 ```
 
 2. Open the project folder
 
 ```
-cd odera-x-and-oh
+cd X-and-O
 ```
 
 ## Usage 
